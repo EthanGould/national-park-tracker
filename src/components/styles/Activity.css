@@ -1,0 +1,18 @@
+.activities {
+    margin: 0 0 30px;
+}
+
+.activities__item {
+    margin: 3px 4px;
+    padding: 4px 6px;
+    background-color: green;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+}
+
+@media screen and (min-width: 600px;) {
+    .activities {
+        margin: 0 -4px 0 0;
+    }
+}
