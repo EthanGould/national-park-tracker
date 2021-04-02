@@ -3,7 +3,7 @@ import './styles/Activity.css';
 const Activities = ({ activities }) => {
     return (
         <div className="activities">
-            {activities.map((activity) => ( <span className="activities__item">{activity.name}</span> ))}
+            { activities.map((activity, i) => ( <span key={i} className="activities__item">${activity.name}</span> )) }
         </div>
     )
 }

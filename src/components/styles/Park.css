@@ -62,6 +62,15 @@
     flex-basis: 50%;
 }
 
+.park__hour {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.park__hour.today{
+    color: green;
+}
+
 .park__pin {
     font-size: .75rem;
     color: white;
@@ -80,9 +89,9 @@
 @media screen and (min-width: 600px) {
     .park {
         flex-direction: row;
-        margin-top: -100px !important;
+        margin-top: -125px !important;
         padding: 40px;
-        border: 1px solid lightgrey;
+        border: 1px solid rgb(224, 224, 224);
         border-radius: 5px;
     }
 

@@ -5,7 +5,6 @@ import {
   Route
 } from 'react-router-dom';
 import ParksData from './data/ParksData.json';
-import Home from './components/Home'
 import Header from './components/Header';
 import ParkCard from './components/ParkCard';
 import Park from './components/Park';
@@ -13,23 +12,53 @@ import './App.css';
 
 
 function App() {
-  const [parksData, setParksData] = useState(ParksData);
+
+  // Sync initial state from past visits
+  let SyncedParksData = ParksData;
+
+  const syncHistory = () => {
+    let history = localStorage.getItem('likesHistory');
+    if (history) {
+      history = JSON.parse(history);
+      SyncedParksData = ParksData.map((park) => { return history.likes.includes(park.id) ? { ...park, isHearted: !park.isHearted} : park });
+    }
+  }
+
+  syncHistory();
+
+  const [parksData, setParksData] = useState(SyncedParksData);
 
   const heartPark = (id) => {
     setParksData(
       parksData.map((park) => { return park.id === id ? { ...park, isHearted: !park.isHearted} : park })
     );
+    saveAction(id);
+  }
+
+  const saveAction = (id) => {
+    let history = localStorage.getItem('likesHistory') || JSON.stringify({ likes: [] });
+    history = JSON.parse(history);
+
+    // Toggle "isHearted" state in DB
+    if (!history.likes.includes(id)) {
+      history.likes.push(id);
+    } else {
+      history.likes.splice(history.likes.indexOf(id), 1);
+    }
+
+    localStorage.setItem('likesHistory', JSON.stringify(history));
+    syncHistory();
   }
 
   const filterResults = (query) => {
     resetState();
     setParksData(
-      ParksData.filter((park) => { return park.fullName.toLowerCase().includes(query.toLowerCase()) })
+      SyncedParksData.filter((park) => { return park.fullName.toLowerCase().includes(query.toLowerCase()) })
     );
   }
 
   const resetState = () => {
-    setParksData(ParksData);
+    setParksData(SyncedParksData);
   }
 
   return (

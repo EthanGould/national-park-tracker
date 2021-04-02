@@ -2021,13 +2021,13 @@
         "exceptions": [],
         "description": "Canyonlands National Park is generally open 24 hours a day, year-round.",
         "standardHours": {
-            "wednesday": "All Day",
-            "monday": "All Day",
-            "thursday": "All Day",
-            "sunday": "All Day",
-            "tuesday": "All Day",
-            "friday": "All Day",
-            "saturday": "All Day"
+            "wednesday": "All W Day",
+            "monday": "All M Day",
+            "thursday": "All Thur Day",
+            "sunday": "All Sun Day",
+            "tuesday": "All Tues Day",
+            "friday": "All Fri Day",
+            "saturday": "All Sat Day"
         },
         "name": "Open Year-round"
     }],
