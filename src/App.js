@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from 'react-router-dom';
@@ -62,14 +62,14 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename="/parks">
       <div className="App">
         <Switch>
-          <Route path="/parks/:parkId">
+          <Route path={"/:parkId"}>
             <Header onChange={filterResults} showSearch={false} minimal={true} resetState={resetState} />
             <Park parks={parksData} onHeart={heartPark} />
           </Route>
-          <Route exact path="/parks">
+          <Route exact path={"/"}>
             <Header onChange={filterResults} showSearch={true} resetState={resetState} />
             <ul className="park-cards__container container">
               {parksData.map((park) => ( <ParkCard key={park.id} park={park} onHeart={heartPark} /> ))}

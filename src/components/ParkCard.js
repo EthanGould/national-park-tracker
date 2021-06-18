@@ -13,7 +13,7 @@ const ParkCard = ({ park, onHeart, onPress }) => {
                 <div className="park-card__img-wrap"><img className='park-card__img' alt={park.images[0].altText} src={park.images[0].url}/></div>
             :'No IMAGE'}
             <div className='park-card__top'>
-                <Link to={`${match.url}/${park.id}`}><h2 className='park-card__header'>{park.fullName}</h2></Link>
+                <Link to={`${match.url}${park.id}`}><h2 className='park-card__header'>{park.fullName}</h2></Link>
                 <button onClick={() => onHeart(park.id)} className={`park__heart ${park.isHearted ? 'filled' : ''}`}>{park.isHearted ? <FaHeart /> : <FaRegHeart/> }</button>
             </div>
             <p className='park-card__desc'>{park.description.substr(0, 225)}...</p>

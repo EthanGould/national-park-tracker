@@ -12,7 +12,7 @@ import { FaTag } from 'react-icons/fa';
 import { useRouteMatch } from 'react-router-dom';
 
 const Park = ({ parks, onHeart }) => {
-    let match = useRouteMatch('/parks/:id');
+    let match = useRouteMatch('/:id');
     let park = parks.filter((park) => { return park.id === match.params.id })[0];
 
     // Converts a list of state code into the full name of the states
