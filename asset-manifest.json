@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/national-park-tracker/static/css/main.c60d2525.chunk.css",
+    "main.js": "/national-park-tracker/static/js/main.17b6ae43.chunk.js",
+    "main.js.map": "/national-park-tracker/static/js/main.17b6ae43.chunk.js.map",
+    "runtime-main.js": "/national-park-tracker/static/js/runtime-main.05c73bbf.js",
+    "runtime-main.js.map": "/national-park-tracker/static/js/runtime-main.05c73bbf.js.map",
+    "static/js/2.1235f245.chunk.js": "/national-park-tracker/static/js/2.1235f245.chunk.js",
+    "static/js/2.1235f245.chunk.js.map": "/national-park-tracker/static/js/2.1235f245.chunk.js.map",
+    "static/js/3.4382a6b0.chunk.js": "/national-park-tracker/static/js/3.4382a6b0.chunk.js",
+    "static/js/3.4382a6b0.chunk.js.map": "/national-park-tracker/static/js/3.4382a6b0.chunk.js.map",
+    "index.html": "/national-park-tracker/index.html",
+    "static/css/main.c60d2525.chunk.css.map": "/national-park-tracker/static/css/main.c60d2525.chunk.css.map",
+    "static/js/2.1235f245.chunk.js.LICENSE.txt": "/national-park-tracker/static/js/2.1235f245.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.05c73bbf.js",
+    "static/js/2.1235f245.chunk.js",
+    "static/css/main.c60d2525.chunk.css",
+    "static/js/main.17b6ae43.chunk.js"
+  ]
+}
